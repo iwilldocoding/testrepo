@@ -1,0 +1,1 @@
+annonated attribute : it is a class or instance variable that has metadata attached to it using a special syntax

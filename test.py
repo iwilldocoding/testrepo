@@ -58,3 +58,19 @@ async def register_user(user: usercreate):
     return {"message":f"User {user.username}"}'''
 # now this the basic implementation of both async and pydantic in fastapi to build an end point so now lets start building a form section
 
+from datetime import date
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def from_birth_year(cls, name, birth_year):
+        # Calculates age and returns a new instance of the class (cls)
+        age = date.today().year - birth_year
+        return cls(name, age) # Equivalent to Person(name, age)
+
+person1 = Person('Adam', 19)
+person2 = Person.from_birth_year('John', 1985)
+print(person2.age)
