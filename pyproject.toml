@@ -6,7 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "biobrain"
 version = "0.1.0"
 dependencies = [
+    "fastapi[standard]>=0.129.0",
     # Add your required packages here, e.g., "requests", "numpy"
     "pandas>=2.3.3",
     "pydantic>=2.12.5",
+    "uvicorn>=0.41.0",
 ]
